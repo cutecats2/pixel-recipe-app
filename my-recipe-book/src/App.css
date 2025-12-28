@@ -1,0 +1,148 @@
+/* ============================= */
+/* GLOBAL / CURSOR */
+/* ============================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2d9e6;
+  cursor: url("./assets/cursor.png") 0 0, auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Force cursor inside app frame (Electron-safe) */
+.game-frame {
+  cursor: url("./assets/cursor.png") 0 0, auto;
+}
+
+/* Prevent browser pointer override */
+button,
+button:hover,
+button:active {
+  cursor: inherit !important;
+}
+
+/* ============================= */
+/* WINDOW + GAME FRAME */
+/* ============================= */
+
+.window {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f2d9e6;
+}
+
+.game-frame {
+  width: 512px;
+  height: 512px;
+
+  background-color: #fff4fa;
+
+  border: 6px solid #c86b98;
+  box-shadow: 8px 8px 0 #9c4d73;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* MENU SCREEN */
+/* ============================= */
+
+.menu-screen {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-logo {
+  width: 220px;
+  margin-bottom: 28px;
+
+  image-rendering: pixelated;
+}
+
+/* ============================= */
+/* PIXEL BUTTONS */
+/* ============================= */
+
+.pixel-button {
+  font-family: "Press Start 2P", monospace;
+  font-size: 14px;
+
+  padding: 12px 20px;
+  margin-bottom: 14px;
+
+  background-color: #f7b2d9;
+  color: #5a2a44;
+
+  border: 4px solid #c86b98;
+  box-shadow: 4px 4px 0 #9c4d73;
+}
+
+.pixel-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+/* ============================= */
+/* RECIPE SCREEN */
+/* ============================= */
+
+.recipe-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.back-button {
+  position: absolute;
+  top: 5px;
+  right: 16px;
+
+  font-size: 10px;
+  padding: 6px 8px;
+
+  z-index: 10;
+}
+
+
+
+
+.recipe-card-img {
+  width: 512px;
+  height: 512px;
+
+  image-rendering: crisp-edges;
+
+  display: block;
+}
+
+
+
+/* ============================= */
+/* REMOVE DEFAULT BROWSER STYLES */
+/* ============================= */
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+
+
+
